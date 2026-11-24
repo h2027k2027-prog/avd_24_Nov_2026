@@ -17,5 +17,5 @@ jobs:
               env:
                 USERNAME_ENV: ${{ secrets.USERNAME_ENV }}
                 PASSWORD_ENV: ${{ secrets.PASSWORD_ENV }}   
-              run:read.py
+              run: python read.py
 
