@@ -13,9 +13,9 @@ jobs:
             - name: checkout code / download code
               uses: actions/checkout@v7
 
-            - name: run validate csv file 
-              run: python validate.py
-
-            - name: move data to target
-              run: echo 'move data'
+            - name: run read programme 
+              env:
+                USERNAME_ENV: ${{ secrets.USERNAME_ENV }}
+                PASSWORD_ENV: ${{ secrets.PASSWORD_ENV }}   
+              run:read.py
 
