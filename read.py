@@ -1,15 +1,10 @@
-
 import os
 
 username = os.getenv('USERNAME_ENV')
-password = os.getenv('PASSWORD_ENV')
 
 if username is None:
-    print("Username environment variable is missing")
+    print("Secret is not available")
+elif username == '':
+    print("Secret is available but empty")
 else:
-    print("Username received:", repr(username))
-
-if username and username.strip() == 'ADMIN':
-    print("valid")
-else:
-    print("invalid")
+    print("Username received successfully")
